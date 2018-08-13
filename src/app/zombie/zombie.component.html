@@ -1,8 +1,8 @@
 <app-health-bar
-  [healthPercents]="healthPercents"
-  [healthValue]="healthValue"
+  [health]="health$ | async"
+  [healthScaled]="(health$ | async) * scale"
   (initClicker)="initGame()">
 </app-health-bar>
-<div [hidden]="healthPercents < 0" class="zombie-wrap">
-  <img #zombie class="zombie" src="./../../assets/zombie.jpg" alt="Zombie">
+<div [hidden]="(health$ | async) < 0" class="bug-wrap" (click)="clickHealth()">
+  <img #bug class="zombie" src="./../../assets/bug.png" alt="Bug">
 </div>

@@ -9,8 +9,8 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 export class HealthBarComponent {
   @Output() public initClicker: EventEmitter<void> = new EventEmitter<void>();
 
-  @Input() public healthPercents = 0;
-  @Input() public healthValue = 1000;
+  @Input() public health = 0;
+  @Input() public healthScaled = 100;
 
   public restart() {
     this.initClicker.emit();

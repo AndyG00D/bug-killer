@@ -1,9 +1,9 @@
 <div class="health">
-  <ng-container *ngIf="healthPercents > 0; else loose">
-    <p class="health-value">{{healthValue}}</p>
+  <ng-container *ngIf="health > 0; else win">
+    <p class="health-value">{{healthScaled}}</p>
   </ng-container>
-  <ng-template #loose>
-    <p class="health-value health-value-end" (click)="restart()"> You Loose, Click to Try Again</p>
+  <ng-template #win>
+    <p class="health-value health-value-end" (click)="restart()"> You Win! Click to Restart Game</p>
   </ng-template>
-  <div class="health-bar" [style.width.%]="healthPercents"></div>
+  <div class="health-bar" [style.width.%]="health"></div>
 </div>
