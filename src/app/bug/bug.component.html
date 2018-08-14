@@ -4,5 +4,6 @@
   (initClicker)="initGame()">
 </app-health-bar>
 <div [hidden]="(health$ | async) < 0" class="bug-wrap" (click)="clickHealth()">
-  <img #bug class="zombie" src="./../../assets/bug.png" alt="Bug">
+  <img #bug *ngIf="isAlive" class="bug" src="./../../assets/bug.png" alt="Bug">
+  <img #bug *ngIf="!isAlive" class="bug" src="./../../assets/dead.png" alt="Dead bug">
 </div>

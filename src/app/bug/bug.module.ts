@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HealthBarComponent } from './shared/health-bar/health-bar.component';
-import { ZombieComponent } from './zombie.component';
-import { ZombieRoutingModule } from './zombie-routing.module';
+import { BugComponent } from './bug.component';
+import { BugRoutingModule } from './bug-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    ZombieRoutingModule
+    BugRoutingModule
   ],
   declarations: [
     HealthBarComponent,
-    ZombieComponent
+    BugComponent
   ]
 })
-export class ZombieModule {
+export class BugModule {
 }

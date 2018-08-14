@@ -1,0 +1,7 @@
+<div class="health">
+    <p *ngIf="health" class="health-value">{{healthScaled}}</p>
+    <p *ngIf="!health" class="health-value health-value-end" (click)="restart()">
+      You Win! Click to Restart Game
+    </p>
+  <div class="health-bar" [style.width.%]="health"></div>
+</div>
